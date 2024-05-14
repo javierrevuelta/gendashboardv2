@@ -8,7 +8,8 @@ const Login = () => {
         <input type="text" name="name"/>
         <label>Password</label>
         <input type="password" placeholder='Introduce your Password'/>
-        <input type="submit" value="Send" />
+        <p className='text-right text-slate-500 '>Forgot your Password</p>
+        <input className='border bg-slate-500 ' type="submit" value="Send" />
 
         </form></div>
   )

@@ -1,8 +1,12 @@
 import React from 'react'
+import Sidebar from '../components/Sidebar'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className='flex w-full justify-center'>
+      <Sidebar />
+      <div className='text-center'> Dashboard</div>
+    </div>
   )
 }
 
