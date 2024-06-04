@@ -1,25 +1,13 @@
 "use client"
-
 import React, {useEffect} from 'react';
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from "axios"
 
 
-
-
-
-    
-
-
-
-
-
-
-
 const GoogleAnalyticsApp = () => {
     const propertyId = '324458516';
-    const startDate = 'yyyy-mm-dd';
-    const endDate = 'yyyy-mm-dd';
+    const startDate = '2024-01-01';
+    const endDate = '2024-05-31';
   
     const googleLogin = useGoogleLogin( {
       clientId: "1074926211630-bt64mbvkcfv94ng1vt6sc5v1sfkvs9fh.apps.googleusercontent.com",
@@ -52,7 +40,7 @@ const GoogleAnalyticsApp = () => {
         };
   
         const apiResponse = await axios.post(
-          `https://analyticsdata.googleapis.com/v1beta/properties/${ propertyId }:runReport`,
+          `https://analyticsdata.googleapis.com/v1beta/properties/${ propertyId }:requestBody`,
           requestBody,
           { headers }
         );
@@ -69,11 +57,12 @@ const GoogleAnalyticsApp = () => {
         fetchData( googleLogin.tokenResponse.access_token );
       }
     }, [googleLogin.tokenResponse] );
-  
+
     return (
       <div className="App">
         <h1>Google Analytics Report</h1>
-        <Button onClick={ googleLogin }>Check Analytics</Button>
+        
+        <button onClick={ googleLogin }>Check Analytics</button>
       </div>
     );
   };
