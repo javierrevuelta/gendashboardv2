@@ -17,6 +17,7 @@ const GoogleAnalyticsApp = () => {
         if ( accessToken ) {
           fetchData(accessToken)
         }
+        console.log("Login Success")
       },
       onError: ( error ) => {
         console.error( error );
