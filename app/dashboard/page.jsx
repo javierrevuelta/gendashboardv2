@@ -10,7 +10,7 @@ const Dashboard = () => {
       <Analytics/>
       <DatosGAds/>
       <DatosMetaAds/>
-    <div className='flex justify-center p-10 gap-5 min-h-screen w-full'>
+    <div className='flex justify-center p-10 gap-5  w-full'>
       <Sidebar />
       <div className='flex w-4/5 flex-wrap gap-5 justify-center' > 
       <div className='flex   w-2/5 h-3/6 gap-5 bg-indigo-500 rounded justify-center items-center'> Item 1</div>
